@@ -1,5 +1,22 @@
 $(function() {
 
+var className = $('body').attr('class');
+switch(className)
+{
+	case 'isHome':
+		$('.menu li').eq(0).addClass('active-item');
+		break;
+	case 'isPortfolio':
+		$('.menu li').eq(1).addClass('active-item');
+		break;
+	case 'isAbout':
+		$('.menu li').eq(2).addClass('active-item');
+		break;
+	default:
+		break;
+}
+
+
 $owlMain = $('.owl-carousel-main');
 
 $owlMain.owlCarousel({
